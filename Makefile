@@ -1,4 +1,4 @@
-DC = sudo docker compose
+DC = docker compose
 
 restart_all: drop_all start_all
 

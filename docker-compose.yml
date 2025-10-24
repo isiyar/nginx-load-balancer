@@ -1,5 +1,5 @@
 services:
-  nginx-dev:
+  nginx:
     image: nginx:alpine
     container_name: nginx
     restart: unless-stopped
