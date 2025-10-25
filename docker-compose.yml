@@ -6,6 +6,8 @@ services:
     command: '/bin/sh -c ''while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g "daemon off;"'''
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - /etc/ssl/certs/cl-cert.pem:/etc/ssl/certs/cl-cert.pem:ro
+      - /etc/ssl/private/cl-private.key:/etc/ssl/private/cl-private.key:ro
     ports:
       - 443:443
       - 80:80
